@@ -9,11 +9,11 @@ public class DriverEstimator {
 
         //System.out.println( one.getCurrentEstimate()  );
 
-        one.generateEstimateRadius(10000);
+        one.generateEstimate(1);
 
         System.out.println( one.getCurrentEstimate() );
 
-        two.generateEstimateError(0.001);
+        two.generateEstimate(0.001);
 
         System.out.println( two.getCurrentEstimate() );
 

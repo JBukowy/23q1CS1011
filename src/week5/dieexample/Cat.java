@@ -14,6 +14,10 @@ public class Cat {
         this.weight = weight;
     }
 
+    public Cat(String name, double weight){
+        this(name, 0, weight);
+    }
+
 
     public double getWeight(){
         return this.weight;

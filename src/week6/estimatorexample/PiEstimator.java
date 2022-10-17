@@ -29,7 +29,7 @@ public class PiEstimator {
         return numberOfPointInCircle;
     }
 
-    public double generateEstimateRadius(int radius){
+    public double generateEstimate(int radius){
 
         estimate(radius);
 
@@ -37,7 +37,7 @@ public class PiEstimator {
 
     }
 
-    public double generateEstimateError(double error){
+    public double generateEstimate(double error){
 
         int radius = 0;
 
