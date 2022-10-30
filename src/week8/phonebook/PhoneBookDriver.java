@@ -1,5 +1,6 @@
 package week8.phonebook;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class PhoneBookDriver {
@@ -12,10 +13,10 @@ public class PhoneBookDriver {
         long[] phoneNumbers;
 
         System.out.println("How many names and numbers do you want to store?");
-        long size = Long.parseLong(in.nextLine());
+        int size = Integer.parseInt(in.nextLine());
 
-        names = new String[(int)size];
-        phoneNumbers = new long[names.length];
+        names = new String[size];
+        phoneNumbers = new long[size];
 
         for(int i = 0; i < names.length; i++){
             System.out.println("Please enter a name.");
@@ -24,8 +25,8 @@ public class PhoneBookDriver {
             phoneNumbers[i] = Long.parseLong(in.nextLine());
         }
 
-        System.out.print(names);
-        System.out.print(phoneNumbers);
+        System.out.println(Arrays.toString(names));
+        System.out.println(Arrays.toString(phoneNumbers));
 
 
     }
