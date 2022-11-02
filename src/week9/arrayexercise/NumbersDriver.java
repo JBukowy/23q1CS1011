@@ -23,25 +23,38 @@ public class NumbersDriver {
             }else if(userResponse.equals("3")){
                 System.out.println("The median value is " + median(numbers));
             }else if(userResponse.equals("4")){
-
+                System.out.println("The min value is " + min(numbers));
             }else if(userResponse.equals("5")){
-
+                System.out.println("The average is " + average(numbers));
             }
 
         }while(!userResponse.equals("1"));
 
     }
 
-    private static double max(double[] num){
-        double max = num[0];
-
-        for(int i = 1; i < num.length; i++){
-            if(max < num[i]){
-                max = num[i];
-            }
+    private static double average(double[] numbers){
+        double sum = 0;
+        for(double d: numbers){
+            sum += d;
         }
+        return sum / numbers.length;
 
-        return max;
+    }
+
+    private static double max(double[] num){
+//        double max = num[0];
+//
+//        for(int i = 1; i < num.length; i++){
+//            if(max < num[i]){
+//                max = num[i];
+//            }
+//        }
+//
+//        return max;
+        double[] copy = Arrays.copyOf(num,num.length);
+        Arrays.sort(copy);
+
+        return copy[copy.length-1];
     }
 
     private static double median(double[] numbers){
@@ -57,6 +70,13 @@ public class NumbersDriver {
         }
         return median;
 
+    }
+
+    private static double min(double[] numbers){
+        double[] copy = Arrays.copyOf(numbers,numbers.length);
+        Arrays.sort(copy);
+
+        return copy[0];
     }
 
 
